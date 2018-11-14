@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{79CB7E3D-6B42-41CE-A62B-DDF8B908C331}</ProjectGuid>
+    <ProjectGuid>{FEB37DF2-81DF-46F6-A970-041B9BA35B48}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Uva10474WhereIsTheMarble</RootNamespace>
+    <RootNamespace>Uva101TheBlocksProblem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -143,7 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Uva10474-WhereIsTheMarble.cpp" />
+    <ClCompile Include="Uva101-TheBlocksProblem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

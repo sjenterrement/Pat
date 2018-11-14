@@ -20,10 +20,11 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{79CB7E3D-6B42-41CE-A62B-DDF8B908C331}</ProjectGuid>
+    <ProjectGuid>{F3AB8D4B-F14D-458E-A9B4-6AB4465F8C36}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Uva10474WhereIsTheMarble</RootNamespace>
+    <RootNamespace>My1743</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <ProjectName>2017_4_3</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -143,7 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Uva10474-WhereIsTheMarble.cpp" />
+    <ClCompile Include="1078_StringCompressionAndDecompression.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
