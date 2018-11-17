@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Uva101-TheBlocksProblem", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2017_4_3", "17-4-3\17-4-3.vcxproj", "{F3AB8D4B-F14D-458E-A9B4-6AB4465F8C36}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1003", "1003\1003.vcxproj", "{BC30DD35-06EA-4466-B24E-B82461ADB3A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -81,6 +83,14 @@ Global
 		{F3AB8D4B-F14D-458E-A9B4-6AB4465F8C36}.Release|x64.Build.0 = Release|x64
 		{F3AB8D4B-F14D-458E-A9B4-6AB4465F8C36}.Release|x86.ActiveCfg = Release|Win32
 		{F3AB8D4B-F14D-458E-A9B4-6AB4465F8C36}.Release|x86.Build.0 = Release|Win32
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Debug|x64.ActiveCfg = Debug|x64
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Debug|x64.Build.0 = Debug|x64
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Debug|x86.ActiveCfg = Debug|Win32
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Debug|x86.Build.0 = Debug|Win32
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Release|x64.ActiveCfg = Release|x64
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Release|x64.Build.0 = Release|x64
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Release|x86.ActiveCfg = Release|Win32
+		{BC30DD35-06EA-4466-B24E-B82461ADB3A3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
