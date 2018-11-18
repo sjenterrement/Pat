@@ -1,47 +1,38 @@
-#include<cstdio>
-#include<iostream>
-using namespace std;
-
-bool judge(char a[],int index) {
-	if (a[index]=='P'&&a[index+1]=='T')
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	char c[100];
+	int i, j, n;
+	int count_P, count_A, count_T, pos_P, pos_T;
+	scanf_s("%d\n", &n);
+	for (i = 0; i < n; i++)
 	{
-		return 1;
-	}
-	if (index=1&&(a[index] == 'A'&&a[index + 1] == 'P'))
-	{
-		return 1;
-	}
-	if (index = strlen(a)-2&& (a[index] == 'T'&&a[index + 1] == 'A'))
-	{
-		return 1;
-	}
-	return 0;
-}
-
-int main() {
-	int n;
-	char a[101];
-	cin >> n;
-	while (n--)
-	{   int i = 0;
-		cin >> a;
-		//cout << a;
-		if (a[i]!='\0')
+		gets_s(c);
+		count_P = 0;
+		count_A = 0;
+		count_T = 0;
+		pos_P = 0;
+		pos_T = 0;
+		for (j = 0; j < strlen(c); j++)
 		{
-			if (a[i]!='P'&&a[i]!='A'&&a[i]!='T'&&a[i]!=' ')
+			if (c[j] == 'P')
 			{
-				cout << "NO";
+				count_P++;
+				pos_P = j;
 			}
-			else if (judge(a,i))
+			if (c[j] == 'A')
+				count_A++;
+			if (c[j] == 'T')
 			{
-				cout << "NO";
+				count_T++;
+				pos_T = j;
 			}
-			else
-			{
-				cout << "YES";
-			}
-			i++;
 		}
+		if (count_P + count_A + count_T != strlen(c) || pos_T - pos_P <= 1 || count_T > 1 || pos_P * (pos_T - pos_P - 1) != strlen(c) - pos_T - 1)
+			printf("NO\n");
+		else
+			printf("YES\n");
 	}
-	//return 0;
 }
+
