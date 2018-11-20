@@ -32,7 +32,7 @@ int main() {
 	sort(num, num + n);
 	for (int i = n - 1; i >= 0; i--)
 	{
-		if (visit[num[i/]] == false)
+		if (visit[num[i]] == false)
 		{
 			if (cnt != 1)
 			{
