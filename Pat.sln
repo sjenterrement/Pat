@@ -65,6 +65,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1025", "1025\Convert-Link.v
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1026", "1026\1026.vcxproj", "{6A30C7F0-7010-4E51-AAEA-A9F385D6F11E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1027", "1027\1027.vcxproj", "{E81AC186-3666-4F49-B402-C4881D9324A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -321,6 +323,14 @@ Global
 		{6A30C7F0-7010-4E51-AAEA-A9F385D6F11E}.Release|x64.Build.0 = Release|x64
 		{6A30C7F0-7010-4E51-AAEA-A9F385D6F11E}.Release|x86.ActiveCfg = Release|Win32
 		{6A30C7F0-7010-4E51-AAEA-A9F385D6F11E}.Release|x86.Build.0 = Release|Win32
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Debug|x64.ActiveCfg = Debug|x64
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Debug|x64.Build.0 = Debug|x64
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Debug|x86.ActiveCfg = Debug|Win32
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Debug|x86.Build.0 = Debug|Win32
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Release|x64.ActiveCfg = Release|x64
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Release|x64.Build.0 = Release|x64
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Release|x86.ActiveCfg = Release|Win32
+		{E81AC186-3666-4F49-B402-C4881D9324A8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
