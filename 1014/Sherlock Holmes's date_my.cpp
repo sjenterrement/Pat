@@ -87,8 +87,8 @@ int main() {
 		{
 			if ((str3[i] >= 'a'&&str3[i] <= 'z') || (str3[i] >= 'A'&&str3[i] <= 'Z'))
 			{
-				std::stringstream ss;
-				std::string str;
+				stringstream ss;
+				string str;
 				ss << i;
 				ss >> str;
 				if (i <= 9)

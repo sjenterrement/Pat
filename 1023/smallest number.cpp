@@ -1,48 +1,30 @@
 #include<iostream>
-#include<vector>
 #include<string>
-#include<algorithm>
+#include<vector>
 using namespace std;
-
-int main() {
-	vector<char>v1;
-	vector<int>v;
-	string str;
-	getline(cin, str);
-	char temp;
-	for (int i = 0; i < str.length(); i++)
+int main()
+{
+	vector<int> v(10);
+	for (int i = 0; i < 10; i++)
 	{
-		if (str[i] != ' ')
+		cin >> v[i];
+	}
+	if (v[0] != 0)
+	{
+		int j;
+		for (j = 1; j < 10 && v[j] == 0; j++);
+		cout << j;
+		v[j]--;
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		while (v[i] != 0)
 		{
-			v1.push_back(str[i]);
+			cout << i;
+			v[i]--;
 		}
 	}
-
-	int k = 0;
-
-	for (int i = 0; i < v1.size(); i++)
-	{
-		for (int i = 0; i < v1[i]-48; i++)
-		{
-			v.push_back(k);
-		}
-		k++;
-	}
-
-	sort(v.begin(), v.end());
-	for (int i = 0; i < v.size(); i++)
-	{
-		if (v[i] != '0')
-		{
-			temp = v[0];
-			v[0] = v[i];
-			v[i] = temp;
-			break;
-		}
-	}
-	for (int i = 0; i < v.size(); i++)
-	{
-		cout << v[i];
-	}
+	cout << endl;
+	system("pause");
 	return 0;
 }
