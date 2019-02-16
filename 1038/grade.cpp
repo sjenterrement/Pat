@@ -1,3 +1,4 @@
+//14/20...оК╦╢тсак
 #include<cstdio>
 #include<vector>
 #include<algorithm>
