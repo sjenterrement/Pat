@@ -1,59 +1,39 @@
-#include<cstdio>
-#include<vector>
 #include<iostream>
 #include<string>
+#include<algorithm>
 using namespace std;
-
-vector<char> v;
-string s1 = { 0 }, s2 = { 0 };
-int x;
-
-int main() {
-	cin >> s1 >> s2;
-	int index = 1;
-	int len1 = s1.length();
-	int len2 = s2.length();
-	for (int i = len1 - 1; i <= 0; i--)
-	{
-		for (int j = len2 - 1; j <= 0; j--)
-		{
-			if (index % 2 == 0)
-			{
-				x = (s1[i] + s2[j]) % 13;
-				if (x == 10)
-				{
-					v.push_back('J');
-				}
-				else if (x == 11)
-				{
-					v.push_back('Q');
-				}
-				else if (x == 12)
-				{
-					v.push_back('K');
-				}
-				else
-				{
-					v.push_back(x);
-				}
-			}
-			else
-			{
-				x = s1[i] - s2[j];
-				if (x < 0)
-				{
-					x += 10;
-				}
-				v.push_back(x);
-			}
+int main()
+{
+	string A;
+	string B;
+	int num;
+	char ref[13] = { '0','1','2','3','4','5','6','7','8','9','J','Q','K' };
+	string c = "";
+	cin >> A >> B;
+	if (B.length() < A.length()) { //补全位数 B小于A 
+		for (int i = B.length(); i < A.length(); i++) {
+			B = "0" + B;
 		}
-
-		index++;
 	}
-
-	for (int i = v.size() - 1; i <= 0; i--)
-	{
-		printf("%d", v[i]);
+	reverse(A.begin(), A.end());
+	reverse(B.begin(), B.end());
+	for (int i = 0; i < A.length(); i++) {
+		if ((i + 1) % 2 != 0) {
+			num = ((A[i] - '0' + B[i] - '0') % 13);
+			c += ref[num];
+		}
+		else {
+			num = B[i] - A[i];
+			if (num < 0)num += 10;
+			c += ref[num];
+		}
 	}
+	if (A.length() < B.length()) {  //补全位数B大于A 
+		for (int i = A.length(); i < B.length(); i++) {
+			c += B[i];
+		}
+	}
+	reverse(c.begin(), c.end());
+	cout << c;
 	return 0;
 }
