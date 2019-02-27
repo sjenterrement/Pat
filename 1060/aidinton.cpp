@@ -5,7 +5,7 @@ using namespace std;
 int main() {
 	int n;
 	cin >> n;
-	int a[100000+5];
+	int a[100000 + 5];
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
 	}
