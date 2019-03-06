@@ -34,7 +34,7 @@ int main() {
 					{
 						flag_alpha = 1;
 					}
-					if (s[i] >= '0' && s[i] <= '9')
+					if (isdigit(s[i]))
 					{
 						flag_num = 1;
 					}
