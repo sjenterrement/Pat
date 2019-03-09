@@ -1,4 +1,4 @@
-//20/20
+/*//20/20
 #include<cstdio>
 using namespace std;
 
@@ -38,6 +38,31 @@ int main() {
 	}
 	
 	printf("%.1f%% %.1f%%", ((count_p - count_v) / N)*100.0, (count_v / N)*100.0);
+
+	return 0;
+}*/
+
+#include<iostream>
+using namespace std;
+int main() {
+	int n, d, k, must = 0, maybe = 0;
+	double e, temp;
+	cin >> n >> e >> d;
+	for (int i = 0; i < n; i++) {
+		cin >> k;
+		int sum = 0;
+		for (int j = 0; j < k; j++) {
+			cin >> temp;
+			if (temp < e)
+				sum++;
+		}
+		if (sum > (k / 2))
+			k > d ? must++ : maybe++;
+	}
+
+	double maybere = (double)maybe / n * 100;
+	double mustre = (double)must / n * 100;
+	printf("%.1f%% %.1f%%", maybere, mustre);
 
 	return 0;
 }
