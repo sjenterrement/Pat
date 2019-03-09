@@ -1,4 +1,4 @@
-#include<iostream>
+/*#include<iostream>
 #include<vector>
 using namespace std;
 int main()
@@ -81,5 +81,52 @@ int main()
 	if (temp2 == 2)
 		cout << "C";
 	system("Pause");
+	return 0;
+}*/
+
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+	int jiawin = 0, yiwin = 0, n;
+	int jia[3] = { 0 }, yi[3] = {0};
+	char x, y;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> x >> y;
+		if (x == 'C'&&y == 'J') {
+			jiawin++;
+			jia[1]++;
+		}
+		else if (x == 'J'&&y == 'B') {
+			jiawin++;
+			jia[2]++;
+		}
+		else if (x == 'B'&&y == 'C') {
+			jiawin++;
+			jia[0]++;
+		}
+		else if (y == 'C'&&x == 'J') {
+			yiwin++;
+			yi[1]++;
+		}
+		else if (y == 'J'&&x == 'B') {
+			yiwin++;
+			yi[2]++;
+		}
+		else if (y == 'B'&&x == 'C') {
+			yiwin++;
+			yi[0]++;
+		}
+	}
+
+	cout << jiawin << " " << n - jiawin - yiwin << " " << yiwin << endl << yiwin << " " << n - yiwin - jiawin << " " << jiawin << endl;
+	string str = "BCJ";
+	int maxjia = jia[0] >= jia[1] ? 0 : 1;
+	maxjia = jia[maxjia] >= jia[2] ? maxjia : 2;
+	int maxyi = yi[0] >= yi[1] ? 0 : 1;
+	maxyi = yi[maxyi] >= yi[2] ? maxyi : 2;
+	cout << str[maxjia] << " " << str[maxyi];
+	
 	return 0;
 }
