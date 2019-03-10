@@ -1,4 +1,4 @@
-#include<vector>
+/*#include<vector>
 #include<cstdio>
 #include<algorithm>
 using namespace std;
@@ -88,4 +88,54 @@ int main() {
 		printf("%d %d %d\n", itr->number, itr->grade_d, itr->grade_c);
 
 	return 0;
+}*/
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int M, L, H;
+
+struct node {
+	int id;
+	int gd;
+	int gc;
+}student;
+
+bool cmp(node a, node b) {
+	if ((a.gd + a.gc) != (b.gd + b.gc))
+		return (a.gd + a.gc) > (b.gd + b.gc);
+	else if (a.gd != b.gd)
+		return a.gd > b.gd;
+	else
+		return a.id < b.id;
 }
+
+vector<node> v[4];
+
+int main() {
+	scanf_s("%d%d%d", &M, &L, &H);
+	int count = M;
+	for (int i = 0; i < M; i++) {
+		scanf_s("%d%d%d", &student.id, &student.gd, &student.gc);
+		if (student.gd < L || student.gc < L)
+			count--;
+		else if (student.gd >= H && student.gc >= H)
+			v[0].push_back(student);
+		else if (student.gd >= H && student.gc < H)
+			v[1].push_back(student);
+		else if (student.gd < H&&student.gc < H&&student.gd >= student.gc)
+			v[2].push_back(student);
+		else
+			v[3].push_back(student);
+	}
+	printf("%d\n", count);
+	for (int i = 0; i < 4; i++) {
+		sort(v[i].begin(), v[i].end(), cmp);
+		for (int j = 0; j < v[i].size(); j++)
+			printf("%d %d %d\n", v[i][j].id, v[i][j].gd, v[i][j].gc);
+	}
+	return 0;
+}
+
