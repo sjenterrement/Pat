@@ -1,4 +1,11 @@
 //柳婼大佬
+/*
+这里的用map是因为结构体的属性是分开输入的，
+而且要与准考证号相匹配，
+所以就需要桥梁来找到相应的学生id，
+id是string类型的所以要用map，
+如果是整型可以用数组想关联
+*/
 #include<vector>
 #include<map>
 #include<algorithm>
