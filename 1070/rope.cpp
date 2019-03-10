@@ -1,15 +1,16 @@
 //题理解偏了
 #include<cstdio>
+#include<vector>
 #include<algorithm>
-#define MAXN 10001
 using namespace std;
-int n, a[MAXN];
+int n;
 int main()
 {
 	scanf("%d", &n);
+	vector<int> a(n);
 	for (int i = 0; i < n; i++) scanf("%d", &a[i]);
 
-	sort(a, a + n);
+	sort(a.begin(),a.end());
 
 	int ans = a[0];
 	for (int i = 1; i < n; i++) {
