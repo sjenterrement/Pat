@@ -1,4 +1,4 @@
-#include<iostream>
+/* #include<iostream>
 #include<string>
 using namespace std;
 
@@ -25,4 +25,21 @@ int main() {
 	cout << str << endl;
 	return 0;
 
+}*/
+#include<string>
+#include<iostream>
+using namespace std;
+int main() {
+	string s;
+	cin >> s;
+	string ss = "0";
+	while (s.length() < 3)
+		s.insert(0, ss);
+	for (int i = 0; i < s[0] - '0'; i++)
+		cout << "B";
+	for (int i = 0; i < s[1] - '0'; i++)
+		cout << "S";
+	for (int i = 1; i <= s[2] - '0'; i++)
+		cout << i;
+	return 0;
 }
