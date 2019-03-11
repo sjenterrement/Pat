@@ -38,3 +38,24 @@
 //	}
 //	return 0;
 //}
+
+/*
+程序可以不用结束输入也可以ac，ctrl+z，结束输入
+*/
+#include<iostream>
+#include<string>
+#include<stack>
+using namespace std;
+int main() {
+	stack<string> sck;
+	string s;
+	while (cin >> s)
+		sck.push(s);
+	cout << sck.top();
+	sck.pop();
+	while (!sck.empty()) {
+		cout << " " << sck.top();
+		sck.pop();
+	}
+	return 0;
+}
