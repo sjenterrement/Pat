@@ -1,4 +1,4 @@
-//20/20
+/*//20/20
 #include<cstdio>
 #include<vector>
 #include<string>
@@ -101,6 +101,65 @@ int main() {
 			if (a[i] == max)
 			{
 				printf(" %d", i);
+			}
+		}
+	}
+
+	return 0;
+}*/
+#include<cstdio>
+#include<vector>
+#include<iostream>
+#include<set>
+using namespace std;
+int main() {
+	int n, m, temp, k;
+	scanf_s("%d%d", &n, &m);
+	vector<set<char>> right(m);
+	vector<int> total(m), wrongCnt(m);
+	for (int i = 0; i < m; i++) {
+		scanf_s("%d%d%d", &total[i], &temp, &k);
+		for (int j = 0; j < k; j++) {
+			char c;
+			cin >> c;
+			right[i].insert(c);
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		int score = 0;
+		scanf_s("\n");
+		for (int j = 0; j < m; j++) {
+			if (j != 0) scanf_s(" ");
+			scanf_s("(%d", &k);
+			set<char> st;
+			char c;
+			for (int l = 0; l < k; l++) {
+				cin >> c;
+				st.insert(c);
+			}
+			scanf_s(")");
+			if (st == right[j]) {
+				score += total[j];
+			}
+			else {
+				wrongCnt[j]++;
+			}
+		}
+		printf("%d\n", score);
+	}
+	int maxWrongCnt = 0;
+	for (int i = 0; i < m; i++) {
+		if (wrongCnt[i] > maxWrongCnt) {
+			maxWrongCnt = wrongCnt[i];
+		}
+	}
+	if (maxWrongCnt == 0)
+		printf("Too simple");
+	else {
+		printf("%d", maxWrongCnt);
+		for (int i = 0; i < m; i++) {
+			if (wrongCnt[i] == maxWrongCnt) {
+				printf(" %d", i + 1);
 			}
 		}
 	}
