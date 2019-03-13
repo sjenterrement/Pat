@@ -1,4 +1,4 @@
-#include<cstdio>
+/*#include<cstdio>
 #include<iostream>
 #include<vector>
 #include<string>
@@ -43,4 +43,27 @@ int main() {
 	}
 
 
+}*/
+#include<iostream>
+#include<string>
+int book[256];
+using namespace std;
+int main() {
+	string a, b;
+	cin >> a >> b;
+	for (int i = 0; i < a.length(); i++) {
+		book[a[i]]++;
+	}
+	int result = 0;
+	for (int i = 0; i < b.length(); i++) {
+		if (book[b[i]] > 0)
+			book[b[i]]--;
+		else
+			result++;
+	}
+	if (result > 0)
+		printf("No %d", result);
+	else
+		printf("Yes %d", a.length() - b.length());
+	return 0;
 }
