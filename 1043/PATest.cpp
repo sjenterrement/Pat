@@ -1,4 +1,4 @@
-#include "stdio.h"
+/*#include "stdio.h"
 
 int main()
 {
@@ -38,5 +38,20 @@ int main()
 			}
 	printf("\n");
 
+	return 0;
+}*/
+#include<iostream>
+using namespace std;
+int main() {
+	int hash[128] = { 0 }, c;
+	while ((c = cin.get()) != EOF)hash[c]++;
+	while (hash['P'] > 0 || hash['A'] > 0 || hash['T'] > 0 || hash['e'] > 0 || hash['s'] > 0 || hash['t'] > 0) {
+		if (hash['P']-- > 0) cout << 'P';
+		if (hash['A']-- > 0) cout << 'A';
+		if (hash['T']-- > 0) cout << 'T';
+		if (hash['e']-- > 0) cout << 'e';
+		if (hash['s']-- > 0) cout << 's';
+		if (hash['t']-- > 0) cout << 't';
+	}
 	return 0;
 }
