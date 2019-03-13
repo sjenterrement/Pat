@@ -1,4 +1,4 @@
-//grade:20!!
+/*//grade:20!!
 #include<cstdio>
 #include<string>
 #include<iostream>
@@ -34,5 +34,18 @@ int main() {
 			s += s1[i];
 		}
 	}
+	return 0;
+}*/
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+	string s1, s2, ans;
+	cin >> s1 >> s2;
+	for (int i = 0; i < s1.length(); i++) {
+		if (s2.find(s1[i]) == string::npos&&ans.find(toupper(s1[i])) == string::npos)
+			ans += toupper(s1[i]);
+	}
+	cout << ans;
 	return 0;
 }
