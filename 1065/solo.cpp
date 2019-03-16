@@ -1,4 +1,4 @@
-//17/25
+/*//17/25
 #include<cstdio>
 #include<vector>
 #include<set>
@@ -74,5 +74,38 @@ int main() {
 		}
 	}
 
+	return 0;
+}*/
+#include<iostream>
+#include<vector>
+#include<set>
+using namespace std;
+int main() {
+	int n, a, b, m;
+	scanf_s("%d", &n);
+	vector<int> couple(100000, -1);
+	for (int i = 0; i < n; i++) {
+		scanf_s("%d%d", &a, &b);
+		couple[a] = b;
+		couple[b] = a;
+	}
+	scanf_s("%d", &m);
+	vector<int> guess(m), isExist(100000);
+	for (int i = 0; i < m; i++) {
+		scanf_s("%d", &guess[i]);
+		if (couple[guess[i]] != -1)
+			isExist[couple[guess[i]]] = 1;
+	}
+	set<int> s;
+	for (int i = 0; i < m; i++) {
+		if (!isExist[guess[i]])
+			s.insert(guess[i]);
+	}
+	printf("%d\n", s.size());
+	for (auto it = s.begin(); it != s.end(); it++) {
+		if (it != s.begin())
+			printf(" ");
+		printf("%05d", *it);
+	}
 	return 0;
 }
