@@ -1,4 +1,4 @@
-//17/20
+/*//17/20
 #include<cstdio>
 #include<vector>
 #include<cmath>
@@ -71,5 +71,28 @@ int main() {
 	}
 
 
+	return 0;
+}*/
+#include<iostream>
+#include<vector>
+#include<map>
+using namespace std;
+
+int m, n, tol;
+vector<vector<int>> v;
+int dir[8][2] = { {-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1} ,{0,-1} };
+bool judge(int i, int j) {
+	for (int k = 0; k < 8; k++) {
+		int tx = i + dir[k][0];
+		int ty = j + dir[k][1];
+		if (tx >= 0 && tx < n&&ty >= 0 && ty < m&&v[i][j] - v[tx][ty] >= 0 - tol && v[i][j] <= tol)
+			return false;
+	}
+	return true;
+}
+
+int main() {
+	int cnt = 0, x = 0, y = 0;
+	scanf_s("%d%d%d", &m, &n, &tol);
 	return 0;
 }
