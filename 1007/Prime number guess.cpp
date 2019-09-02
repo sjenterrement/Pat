@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-bool is_prime(int num) {
+/*bool is_prime(int num) {
 	if (num==1||num==0)
 	{
 		return false;
@@ -33,5 +33,25 @@ int main() {
 		}
 	}
 	cout << count << endl;
+	return 0;
+}*/
+#include<iostream>
+using namespace std;
+
+bool is_prime(int k) {
+	for (int i = 2; i*i <= k; i++) {
+		if (k % i == 0) return false;
+	}
+	return true;
+}
+
+int main() {
+	int k, count = 0;
+	cin >> k;
+	for (int i = 3; i <= k - 2; i++) {
+		if (is_prime(i) && is_prime(i + 2))
+			count++;
+	}
+	cout << count;
 	return 0;
 }

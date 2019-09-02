@@ -26,7 +26,7 @@ int main() {
 	return 0;
 
 }*/
-#include<string>
+/*#include<string>
 #include<iostream>
 using namespace std;
 int main() {
@@ -42,4 +42,23 @@ int main() {
 	for (int i = 1; i <= s[2] - '0'; i++)
 		cout << i;
 	return 0;
+}*/
+
+#include<iostream>
+using namespace std;
+int main() {
+	int k;
+	cin >> k;
+	int n[3];
+	for (int i = 0; i < 3; i++) {
+		n[i] = k % 10;
+		k = k / 10;
+	}
+	for (int i = 0; i < n[2]; i++)
+		cout << 'B';
+	for (int i = 0; i < n[1]; i++)
+		cout << 'S';
+	for (int i = 0; i < n[0]; i++)
+		cout << i + 1;
+		return 0;
 }

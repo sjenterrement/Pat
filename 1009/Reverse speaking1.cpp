@@ -42,7 +42,7 @@
 /*
 程序可以不用结束输入也可以ac，ctrl+z，结束输入
 */
-#include<iostream>
+/*#include<iostream>
 #include<string>
 #include<stack>
 using namespace std;
@@ -56,6 +56,60 @@ int main() {
 	while (!sck.empty()) {
 		cout << " " << sck.top();
 		sck.pop();
+	}
+	return 0;
+}
+*/
+
+/*#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+int main() {
+	string str;
+	getline(cin, str);
+	vector<string> v;
+	string temp = "";
+	for (int i = 0; i < str.length(); i++) {
+		if (str[i] == '\n') break;
+		if (str[i] != ' ') {
+			temp += str[i];
+		}
+		else
+		{
+			v.push_back(temp);
+			temp = "";
+		}
+	}
+	v.push_back(temp);
+	bool first = true;
+	for (int i = v.size()-1; i >= 0; i--) {
+		if (first) {
+			cout << v[i];
+			first = false;
+		}
+		else
+		{
+			cout << " " << v[i];
+		}
+	}
+	return 0;
+}*/
+#include<iostream>
+#include<string>
+#include<stack>
+using namespace std;
+int main() {
+	string str;
+	stack<string> st;
+	while (cin >> str)
+		st.push(str);
+	cout << st.top();
+	st.pop();
+	while (!st.empty())
+	{
+		cout << " " << st.top();
+		st.pop();
 	}
 	return 0;
 }

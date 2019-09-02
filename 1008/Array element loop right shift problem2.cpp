@@ -38,7 +38,7 @@ using namespace std;
 	return 0;
 }
 */
-#include<iostream>
+/*#include<iostream>
 #include<algorithm>
 #include<vector>
 using namespace std;
@@ -59,6 +59,70 @@ int mina() {
 		cout << a[i] << " ";
 	}
 	cout << a[n - 1];
+	return 0;
+}*/
+
+/*#include<iostream>
+#include<list>
+using namespace std;
+int main() {
+	int n, m, k;
+	cin >> n >> m;
+	list<int> l;
+	for (int i = 0; i < n; i++) {
+		cin >> k;
+		l.push_back(k);
+	}
+	for (int i = n - 1; i > n - m-1; i--) {
+		int temp = l.back();
+		l.pop_back();
+		l.push_front(temp);
+	}
+	list<int>::iterator itr = l.begin();
+	bool first = true;
+	while (itr != l.end()) {
+		if (first) {
+			cout << *itr++;
+			first = false;
+		}
+		else
+		{
+			cout << " " << *itr++;
+		}
+	}
+
+	return 0;
+}*/
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main() {
+	int n, m, k;
+	cin >> n >> m;
+	vector<int> v;
+	for (int i = 0; i < n; i++) {
+		cin >> k;
+		v.push_back(k);
+	}
+	m %= n;
+	if(m != 0) {
+		reverse(v.begin(), v.end());
+		reverse(v.begin(), v.begin() + m);
+		reverse(v.begin() + m, v.end());
+	}
+	bool first = true;
+	for (int i = 0; i < v.size(); i++) {
+		if (first) {
+			cout << v[i];
+			first = false;
+		}
+		else
+		{
+			cout << " " << v[i];
+		}
+	}
 	return 0;
 }
 

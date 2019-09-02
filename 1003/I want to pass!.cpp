@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 int main()
 {
@@ -36,3 +36,28 @@ int main()
 	}
 }
 
+*/
+#include<iostream>
+#include<string>
+#include<map>
+using namespace std;
+
+int main() {
+	int n, p, t;
+	cin >> n;
+	string s;
+	for (int i = 0; i < n; i++) {
+		cin >> s;
+		map<char, int> m;
+		for (int j = 0; j < s.length(); j++) {
+			m[s[j]]++;
+			if (s[j] == 'P') p = j;
+			if (s[j] == 'T') t = j;
+		}
+		if (m['P'] == 1 && m['A'] != 0 && m['T'] == 1 && m.size() == 3 && t - p != 1 && p*(t - p - 1) == s.length() - t - 1)
+			printf("YES\n");
+		else
+			printf("NO\n");
+	}
+	return 0;
+}
